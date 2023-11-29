@@ -1,0 +1,25 @@
+{
+  "family": "newtd",
+  "taskRoleArn": "arn:aws:iam::983177440990:role/ecsTaskExecutionRole",
+  "executionRoleArn": "arn:aws:iam::983177440990:role/ecsTaskExecutionRole",
+  "networkMode": "bridge",
+  "containerDefinitions": [
+    {
+      "name": "new",
+      "image": "894185188610.dkr.ecr.ap-south-1.amazonaws.com/new-repo:latest",
+      "cpu": 256,
+      "memory": 256,
+      "essential": true,
+      "portMappings": [
+        {
+          "hostPort": 5000,
+          "protocol": "tcp",
+          "containerPort": 5000
+        }
+      ]
+    }
+  ],
+  "requiresCompatibilities": ["EC2"],
+  "cpu": "256",
+  "memory": "256"
+}
